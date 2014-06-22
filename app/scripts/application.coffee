@@ -6,6 +6,7 @@ requirejs.config
         backbone: 'libs/backbone'
         moment: 'libs/moment.min'
         humanize: 'libs/humanize.min'
+        chart: 'libs/Chart'
 
     shim:
         humanize:
