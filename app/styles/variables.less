@@ -1,6 +1,8 @@
-@teal: rgb(131, 213, 210);
-@pink: rgb(217, 172, 210);
-@orange: rgb(251, 136, 118);
-@purple: #210026;
-@yellow: #FFEA49;
-@black: rgba(0, 0, 0, 0.85);
+@brand: rgb(131, 213, 210);
+
+@black: mix(#000, @brand, 70%);
+@gray-darker: lighten(@black, 13.5%);
+@gray-dark: lighten(@black, 20%);
+@gray: lighten(@black, 33.5%);
+@gray-light: lighten(@black, 60%);
+@gray-lighter: lighten(@black, 93.5%);
