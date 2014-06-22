@@ -1,0 +1,15 @@
+// Panel overrides.
+
+.panel
+    &.panel-dark
+        background-color: black
+
+    &.panel-inline
+        display: inline-block
+
+    &.panel-transparent
+        $alpha: 0.2
+        background-color: rgba(white, $alpha)
+
+        &.panel-dark
+            background-color: rgba(black, $alpha)
