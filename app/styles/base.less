@@ -1,0 +1,100 @@
+@import 'variables';
+@import 'lesshat';
+
+html, body, #app, #bgs {
+    height: 100%;
+}
+
+html {
+    font-size: 60%;
+    @media (min-width:35rem) {
+        font-size: 100%;
+    }
+}
+
+body {
+    font-family: 'Open Sans', serif;
+    font-weight: 400;
+    position: relative;
+
+    .transition(background-color 0.6s ease-out);
+
+}
+
+#bgs {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    div {
+        height: 100%;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+    color: @black;
+
+    .inverted & {
+        color: white;
+    }
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 7rem;
+    letter-spacing: 0.05em;
+}
+
+h2 {
+    font-family: 'proxima-nova-condensed', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+hr {
+    border-color: @black;
+
+    .inverted & {
+        border-color: white;
+    }
+}
+
+.inverted {
+    color: white;
+
+    @media (max-width: 768px) {
+        background-color: @black;
+    }
+
+}
+
+.app-header {
+    padding: 50px 0;
+}
+
+.col-tight {
+    padding: 0;
+}
+
+#work, #play {
+    > section {
+        margin-bottom: 40px;
+    }
+}
+
+.content {
+    > .row {
+        margin-bottom: 40px;
+    }
+}

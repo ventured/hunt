@@ -1,0 +1,11 @@
+{
+    "name": "hunt-vc",
+    "root": "./_site",
+    "clean_urls": true,
+    "cache_control": {
+        "**": false
+    },
+    "routes": {
+        "**": "index.html"
+    }
+}
