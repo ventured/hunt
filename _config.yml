@@ -18,13 +18,10 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://appcues.com
-login_url : http://appcues.com/login
-signup_url : /sign-up
-blog_url: http://blog.appcues.com
+production_url : http://hunt.vc
 logo: logos/mark-angle-white.png
 
-url:         http://appcues.com
+url:         http://hunt.vc
 source:      .
 destination: ./_site
 plugins:     ./_plugins
@@ -40,7 +37,7 @@ limit_posts: 0
 highlighter:    true
 
 relative_permalinks: true
-permalink: /academy/:title
+permalink: /profiles/:title
 paginate_path: 'page:num'
 paginate: 10
 
