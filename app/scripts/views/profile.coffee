@@ -1,12 +1,12 @@
 define [
     'views/base'
-    'templates/index'
+    'templates/profile'
     'models/profile'
     'chart'
-], (BaseView, IndexTemplate, Profile, chart) ->
+], (BaseView, ProfileTemplate, Profile, chart) ->
 
     class ProfileView extends BaseView
-        template: IndexTemplate
+        template: ProfileTemplate
 
         initialize: (options={}) ->
             @model = new Profile
