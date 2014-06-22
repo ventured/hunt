@@ -14,7 +14,8 @@ $ =>
         profile.fetch()
             .then ->
                 console.log 'Got it back'
-                $('body').text profile.toJSON()
+                console.log arguments
+                $('body').text JSON.stringify profile.toJSON()
 
     else
         console.log 'Noop'
