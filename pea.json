@@ -1,11 +1,11 @@
-{
+[{
 	"organization" : "Permal Capital Management",
-	"website" : "http://www.permalcapital.com/",    
-	"people" : 
+	"website" : "http://www.permalcapital.com/",
+	"people" :
 	[
 		{
 			"name" : "Red Barret",
-			"position" : "President & CEO"	
+			"position" : "President & CEO"
 		},
 		{
 			"name" : "Ben Marino",
@@ -48,11 +48,10 @@
 			"position" : "Investment Committee"
 		}
 	]
-},
-{ 
+}, {
 	"organization" : "Windjammer Capital",
-	"website" : "http://www.windjammercapital.com/", 
-	"people" : 
+	"website" : "http://www.windjammercapital.com/",
+	"people" :
 	[
 		{
 			"name" : "Costa Littas",
@@ -72,7 +71,7 @@
 		},
 		{
 			"name" : "Graham Schena",
-			"position" : "Vice President"			
+			"position" : "Vice President"
 		},
 		{
 			"name" : "Caleb Clark",
@@ -83,7 +82,7 @@
 {
 	"organization" : "WestView Capital Partners",
 	"website" : "http://www.wvcapital.com/",
-	"people" : 
+	"people" :
 	[
 		{
 			"name" : "Carlo A. von Schroeter",
@@ -95,7 +94,7 @@
 		},
 		{
 			"name" : "John H. Turner",
-			"position" : "General Partner"	
+			"position" : "General Partner"
 		},
 		{
 			"name" : "Matthew T. Carroll",
@@ -118,7 +117,7 @@
 {
 	"organization" : "Volition Capital",
 	"website" : "http://www.volitioncapital.com/",
-	"people" : 
+	"people" :
 	[
 		{
 			"name" : "Sean Cantwell",
@@ -148,15 +147,15 @@
 		},
 		{
 			"name" : "Neil Wagner",
-			"position" : "Senior Member, Investment Team"		
+			"position" : "Senior Member, Investment Team"
 		},
 		{
 			"name" : "Jonathan Meyer",
-			"position" : "Managing Director"	
+			"position" : "Managing Director"
 		},
 		{
 			"name" : "Anil Seetharam",
-			"position" : "Managing Director"	
+			"position" : "Managing Director"
 		},
 		{
 			"name" : "Saad Hasan",
@@ -220,7 +219,7 @@
 		},
 		{
 			"name" : "Michelle Noon",
-			"position" : "Principal",			
+			"position" : "Principal"
 		},
 		{
 			"name" : "Max Osofsky",
@@ -278,7 +277,7 @@
 		},
 		{
 			"name" : "Noel Ruane",
-			"position" : "Venture Partner",			
+			"position" : "Venture Partner"
 		},
 		{
 			"name" : "Alan Spoon",
@@ -293,65 +292,4 @@
 			"position" : "Partner"
 		}
 	]
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}]
