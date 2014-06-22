@@ -1,24 +1,25 @@
-.container
-    .content
+extends app
 
-        .profile-header.section.row
-            .col-sm-4
-                .headshot(style='background-image: url("http://www.simchajtv.com/wp-content/uploads/2013/05/Warrior-face-3c.jpg")')
-            .col-sm-8
-                h2 John Smith
-                h4 ABC Firm
+block content
 
-        .investments.section.row
-            .col-sm-4
-                ul.no-list.investments-list
-                    li
-                        .bullet
-                        p company1
-                    li
-                        .bullet(style='background-color: #F85931')
-                        p company2
-                    li
-                        .bullet(style='background-color: #CE1836')
-                        p company3
-            .col-sm-8
-                .doughnut
+    .profile-header.section.row
+        .col-sm-4
+            .headshot(style='background-image: url("http://www.simchajtv.com/wp-content/uploads/2013/05/Warrior-face-3c.jpg")')
+        .col-sm-8
+            h2 John Smith
+            h4 ABC Firm
+
+    .investments.section.row
+        .col-sm-4
+            ul.no-list.investments-list
+                li
+                    .bullet
+                    p company1
+                li
+                    .bullet(style='background-color: #F85931')
+                    p company2
+                li
+                    .bullet(style='background-color: #CE1836')
+                    p company3
+        .col-sm-8
+            .doughnut
