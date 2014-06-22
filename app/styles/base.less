@@ -5,13 +5,6 @@ html, body, #app {
     height: 100%;
 }
 
-html {
-    font-size: 60%;
-    @media (min-width:35rem) {
-        font-size: 100%;
-    }
-}
-
 body {
     font-family: 'Open Sans', serif;
     font-weight: 400;
@@ -25,10 +18,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     text-transform: uppercase;
     color: @black;
-
-    .inverted & {
-        color: white;
-    }
 }
 
 h1 {
@@ -49,31 +38,4 @@ h3 {
 
 hr {
     border-color: @black;
-
-    .inverted & {
-        border-color: white;
-    }
-}
-
-.inverted {
-    color: white;
-
-    @media (max-width: 768px) {
-        background-color: @black;
-    }
-
-}
-
-.app-header {
-    padding: 50px 0;
-}
-
-.col-tight {
-    padding: 0;
-}
-
-.content {
-    > .row {
-        margin-bottom: 40px;
-    }
 }

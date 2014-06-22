@@ -7,6 +7,7 @@ requirejs.config
         moment: 'libs/moment.min'
         humanize: 'libs/humanize.min'
         chart: 'libs/Chart'
+        bootstrap: '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min'
 
     shim:
         humanize:
