@@ -2,24 +2,35 @@ extends app
 
 block content
 
-    .profile-header.section.row
-        .col-sm-4
-            .headshot(style='background-image: url("http://www.simchajtv.com/wp-content/uploads/2013/05/Warrior-face-3c.jpg")')
-        .col-sm-8
-            h2 John Smith
-            h4 ABC Firm
+    .profile-header.profile-section
+        .row
+            .col-sm-4
+                .headshot(style='background-image: url("http://www.simchajtv.com/wp-content/uploads/2013/05/Warrior-face-3c.jpg")')
+            .col-sm-8
+                h2 John Smith
+                h4 Advent International
+                p John Smith is a man... The groundhog (Marmota monax), also known as a woodchuck, whistle-pig, or land-beaver in some areas, is a rodent of the family Sciuridae, belonging to the group of large ground squirrels known as marmots. Other marmots, such as the yellow-bellied and hoary marmots, live in rocky and mountainous areas, but the groundhog is a lowland creature. It is widely distributed in North America and common in the northeastern and central United States as well as Canada. Groundhogs are found as far north as Alaska, with their habitat extending southeast to Georgia.
 
-    .investments.section.row
-        .col-sm-4
-            ul.no-list.investments-list
-                li
-                    .bullet
-                    p company1
-                li
-                    .bullet(style='background-color: #F85931')
-                    p company2
-                li
-                    .bullet(style='background-color: #CE1836')
-                    p company3
-        .col-sm-8
-            .doughnut
+    .investments.profile-section
+        .row
+            .col-sm-4
+                h3 Investments:
+                ul.no-list.investments-list
+                    li
+                        .bullet(style='background-color: #{chartColors[0]}')
+                        p Yahoo
+                    li
+                        .bullet(style='background-color: #{chartColors[1]}')
+                        p Google
+                    li
+                        .bullet(style='background-color: #{chartColors[2]}')
+                        p Apple
+                    li
+                        .bullet(style='background-color: #{chartColors[3]}')
+                        p Amazon
+                    li
+                        .bullet(style='background-color: #{chartColors[4]}')
+                        p Appcues
+            .col-sm-8
+                .doughnut
+                    canvas#doughnut(width='400px', height='400px')

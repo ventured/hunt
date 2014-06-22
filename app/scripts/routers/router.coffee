@@ -22,5 +22,5 @@ define [
 
         profile: (profileId) ->
             v = new ProfileView
-                id: profileId
+                ida: profileId
             @_showView v
