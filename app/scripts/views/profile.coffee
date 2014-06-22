@@ -2,7 +2,8 @@ define [
     'views/base'
     'templates/index'
     'models/profile'
-], (BaseView, IndexTemplate, Profile) ->
+    'chart'
+], (BaseView, IndexTemplate, Profile, chart) ->
 
     class ProfileView extends BaseView
         template: IndexTemplate
