@@ -1,5 +1,5 @@
 {
-    "name": "hunt-vc",
+    "name": "huntvc",
     "root": "./_site",
     "clean_urls": true,
     "cache_control": {
