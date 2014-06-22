@@ -14,7 +14,3 @@ define [
             @listenToOnce @model, 'sync', @render
 
             @model.fetch()
-
-        getContext: ->
-            console.log 'Fetching context', @model.toJSON()
-            @model.toJSON()

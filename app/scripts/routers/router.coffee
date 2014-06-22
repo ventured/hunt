@@ -1,9 +1,8 @@
 define [
-    'jquery'
     'backbone'
     'views/index'
     'views/profile'
-], ($, Backbone, IndexView, ProfileView) ->
+], (Backbone, IndexView, ProfileView) ->
 
     class Router extends Backbone.Router
 
