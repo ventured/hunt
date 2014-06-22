@@ -34,8 +34,9 @@ require [
             # Route catcher.
             if Backbone.history?._hasPushState
                 $(document).on 'click', 'a[href]', (evt) =>
-                    href = $(evt.currentTarget).attr 'href'
-                    protocol = @protocol + '//'
+                    $el = $ evt.currentTarget
+                    href = $el.attr 'href'
+                    protocol = $el.get(0).protocol + '//'
 
                     if /^https?:/.test(protocol) and href.slice(0, protocol.length) isnt protocol
                         evt.preventDefault()
