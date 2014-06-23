@@ -45,28 +45,28 @@ define [
             return context
 
         afterRender: ->
-            ctx = document.getElementById("doughnut").getContext('2d')
-            data = [
-                {
-                    value: 30,
-                    color:@chartColors[0]
-                },
-                {
-                    value : 50,
-                    color : @chartColors[1]
-                },
-                {
-                    value : 100,
-                    color : @chartColors[2]
-                },
-                {
-                    value : 40,
-                    color : @chartColors[3]
-                },
-                {
-                    value : 120,
-                    color : @chartColors[4]
-                }
-            ]
+            # ctx = document.getElementById("doughnut").getContext('2d')
+            # data = [
+            #     {
+            #         value: 30,
+            #         color:@chartColors[0]
+            #     },
+            #     {
+            #         value : 50,
+            #         color : @chartColors[1]
+            #     },
+            #     {
+            #         value : 100,
+            #         color : @chartColors[2]
+            #     },
+            #     {
+            #         value : 40,
+            #         color : @chartColors[3]
+            #     },
+            #     {
+            #         value : 120,
+            #         color : @chartColors[4]
+            #     }
+            # ]
 
-            new Chart(ctx).Doughnut(data)
+            # new Chart(ctx).Doughnut(data)
