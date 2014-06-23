@@ -1,0 +1,27 @@
+block header
+    block nav
+        nav.navbar
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/')
+                        img.img-circle(src='/images/whale.jpg', width='40', height='40')
+                        |  Hunt
+                #navbar-collapse.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href='/profiles') Browse
+                        li
+                            form.navbar-form(role='search', style='padding-right: 0')
+                                .form-group
+                                    input.form-control(type='text', placeholder='Search')
+
+
+block body
+    .container
+        .main-content
+            block content

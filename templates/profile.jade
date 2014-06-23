@@ -1,0 +1,43 @@
+extends app
+
+block content
+
+    .row
+        .col-sm-3.sidebar
+            img.img-thumbnail(src=profile.profileImageUrl, width='100%')
+
+            //- .doughnut
+            //-     canvas#doughnut(width='100%')
+
+        .col-sm-9
+
+            h2 #{profile.name}
+            h4 #{profile.company}
+
+            //- section.profile-section
+            //-     textarea.form-control.editable(name='description', placeholder='No bio given yet.')!= profile.description
+
+            section.profile-section
+                textarea.form-control.editable(name='notes', placeholder='Add your notes.', rows='10')!= profile.notes
+
+            //- section.profile-section
+            //-     h3 Investments:
+
+            //-     if profile.investments
+            //-         ul.list-unstyled
+            //-             for investment in profile.investments
+            //-                 li #{investment}
+
+            //-     form.form-inline.add-investment
+            //-         .form-group
+            //-             input.form-control(name='company', placeholder='Google')
+            //-             | &nbsp;
+            //-         .form-group
+            //-             input.form-control(name='date', placeholder='2005')
+            //-             | &nbsp;
+            //-         .form-group
+            //-             input.form-control(name='value', placeholder='$100k')
+            //-             | &nbsp;
+            //-         button.btn.btn-default Add investment
+
+    .matches

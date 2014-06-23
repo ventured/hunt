@@ -1,0 +1,17 @@
+.featured
+    if profiles
+        .row
+            for profile in profiles
+                .col-xs-6.col-sm-3
+                    .text-center
+                        .profile-card
+                            a(href='/profiles/#{profile.id}')
+                                span.img-thumbnail
+                                    .profile-img(style='background-image: url(#{profile.profileImageUrl})')
+                                h4!= profile.name
+                            h6
+                                | #{profile.company}
+
+                                if profile.title
+                                    br
+                                    small!= profile.title

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hunt for VCs</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="/js/require.js" data-main="/js/application"></script>
+    <script type="text/javascript">
+        (function() {
+            if (location.hostname === 'localhost') {
+                var el = document.createElement('script');
+                el.type = 'text/javascript';
+                el.src = '//localhost:35729/livereload.js';
+                document.body.appendChild(el);
+            }
+        })()
+    </script>
+</body>
+</html>
