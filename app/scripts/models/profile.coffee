@@ -1,20 +1,20 @@
 define [
     'underscore'
     'backbone'
-], (_, Backbone) ->
+    'firebase'
+], (_, Backbone, firebase) ->
 
-    class Profile extends Backbone.Model
+    class Profile extends Backbone.Firebase.Model
 
-        urlRoot: 'https://api.angel.co/1/users'
+        firebase: ->
+            firebase.child "people/#{@id}"
 
-        url: -> "#{@urlRoot}/#{@id}?include_details=investor"
+        fetchAngelListProfile: (profileId) ->
+            profileId ?= @id
+            url = "https://api.angel.co/1/users/#{profileId}?include_details=investor"
+            @fetch {url, dataType: 'jsonp'}
 
-        sync: (args..., options) ->
-            _.extend options, dataType: 'jsonp'
-
-            super
-
-        parse: (response) ->
+        parseAngelList: (response) ->
             keys = [
                 'name'
                 'id'

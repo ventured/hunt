@@ -5,11 +5,15 @@ block content
     .profile-header.profile-section
         .row
             .col-sm-4
-                .headshot(style='background-image: url("http://www.simchajtv.com/wp-content/uploads/2013/05/Warrior-face-3c.jpg")')
+                img(src=profile.profileImageUrl, width='200', height='200')
             .col-sm-8
-                h2 John Smith
-                h4 Advent International
-                p John Smith is a man... The groundhog (Marmota monax), also known as a woodchuck, whistle-pig, or land-beaver in some areas, is a rodent of the family Sciuridae, belonging to the group of large ground squirrels known as marmots. Other marmots, such as the yellow-bellied and hoary marmots, live in rocky and mountainous areas, but the groundhog is a lowland creature. It is widely distributed in North America and common in the northeastern and central United States as well as Canada. Groundhogs are found as far north as Alaska, with their habitat extending southeast to Georgia.
+                h2 #{profile.name}
+                h4 #{profile.company}
+
+                if profile.description
+                    p #{profile.description}
+                else
+                    p No bio given yet.
 
     .investments.profile-section
         .row

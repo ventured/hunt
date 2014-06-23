@@ -1,9 +1,7 @@
 define [
     'firebase-lib'
+    'backfire'
 ], (FireB) ->
 
     FIREBASE_URL = 'https://huntvc.firebaseio.com/'
-    return {
-        FIREBASE_URL,
-        firebase: new FireB(FIREBASE_URL)
-    }
+    return new FireB(FIREBASE_URL)

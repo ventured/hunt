@@ -15,7 +15,7 @@ define [
                     id: options.id
 
                 @listenToOnce @model, 'sync', @render
-                @model.fetch()
+                @listenTo @model, 'change', @render
 
             else if options.name
                 @matches = new Matches
@@ -29,7 +29,7 @@ define [
                 chartColors: @chartColors
 
             if @model?
-                context.profile = @model.toJSON
+                context.profile = @model.toJSON()
             if @matches?
                 context.matches = @matches.toJSON()
 

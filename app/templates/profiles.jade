@@ -1,0 +1,14 @@
+extends app
+
+block content
+
+    if profiles
+        ul.media-list
+            for profile in profiles
+                li.media
+                    a.pull-left(href='/profiles/#{profile.id}')
+                        img.img-circle(src=profile.profileImageUrl, width='40', height='40')
+                    a(href='/profiles/#{profile.id}')
+                        h4(style='display: inline-block')
+                            | #{profile.name}
+                            small  #{profile.company}

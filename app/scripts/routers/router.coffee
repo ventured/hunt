@@ -1,13 +1,15 @@
 define [
     'backbone'
     'views/index'
+    'views/profiles'
     'views/profile'
-], (Backbone, IndexView, ProfileView) ->
+], (Backbone, IndexView, ProfilesView, ProfileView) ->
 
     class Router extends Backbone.Router
 
         routes:
             '': 'index'
+            'profiles': 'profiles'
             'profiles/:profileId': 'profile'
 
         _showView: (view) ->
@@ -20,7 +22,11 @@ define [
             v = new IndexView
             @_showView v
 
+        profiles: ->
+            v = new ProfilesView
+            @_showView v
+
         profile: (profileId) ->
             v = new ProfileView
-                ida: profileId
+                id: profileId
             @_showView v
