@@ -1,34 +1,16 @@
 .featured
-    .row
-        .col-sm-4
-            .text-center
-                .profile-card
-                    a(href='/profiles/155')
-                        img.img-thumbnail(src='/images/whale.jpg', width='200')
-                        h4 W. Whale
-                    h6
-                        | Ahab Venture Partners
-                        br
-                        small Managing Partner
+    if profiles
+        .row
+            for profile in profiles
+                .col-xs-6.col-sm-3
+                    .text-center
+                        .profile-card
+                            a(href='/profiles/#{profile.id}')
+                                span.profile-img.img-thumbnail(style='background-image: url(#{profile.profileImageUrl})')
+                                h4!= profile.name
+                            h6
+                                | profile.company
 
-        .col-sm-4
-            .text-center
-                .profile-card
-                    a(href='/profiles/155')
-                        img.img-thumbnail(src='/images/whale.jpg', width='200')
-                        h4 W. Whale
-                    h6
-                        | Ahab Venture Partners
-                        br
-                        small Managing Partner
-
-        .col-sm-4
-            .text-center
-                .profile-card
-                    a(href='/profiles/155')
-                        img.img-thumbnail(src='/images/whale.jpg', width='200')
-                        h4 W. Whale
-                    h6
-                        | Ahab Venture Partners
-                        br
-                        small Managing Partner
+                                if profile.title
+                                    br
+                                    small!= profile.title
