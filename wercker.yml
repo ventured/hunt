@@ -15,3 +15,9 @@ deploy:
         - script:
             name: Make it rain
             code: ./node_modules/.bin/divshot push $WERCKER_DEPLOYTARGET_NAME --token=$DIVSHOT_TOKEN
+
+        - hijonathan/gh-pages:
+            token: $GIT_TOKEN
+            branch: $DEPLOY_BRANCH
+            srcdir: _site
+            domain: hunt.vc
