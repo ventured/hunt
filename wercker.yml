@@ -3,16 +3,15 @@ box: wercker/nodejs
 build:
     # The steps that will be executed on build
     steps:
-        # A step that executes `npm install` command
-        - bundle-install
-        - script:
-            name: Generate site.
-            code: bundle exec jekyll build --trace
+        - npm-install
+
+        - grunt:
+            tasks: 'build'
+        # A step that executes `npm test` command
+        # - npm-test
 
 deploy:
     steps:
-        - hijonathan/gh-pages:
-            token: $GIT_TOKEN
-            branch: $DEPLOY_BRANCH
-            srcdir: _site
-            domain: appcues.com
+        - script:
+            name: Make it rain
+            code: ./node_modules/.bin/divshot push $WERCKER_DEPLOYTARGET_NAME --token=$DIVSHOT_TOKEN
