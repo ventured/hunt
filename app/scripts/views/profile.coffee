@@ -9,6 +9,9 @@ define [
     class ProfileView extends BaseView
         template: ProfileTemplate
 
+        events:
+            'change .editable': 'update'
+
         initialize: (options={}) ->
             if options.id
                 @model = new Profile
@@ -23,6 +26,12 @@ define [
                 @matches.fetch options.name
 
             @chartColors = ['#A3A948', '#EDB92E', '#F85931', '#CE1836', '#009989']
+
+        update: (e) ->
+            $el = @$ e.currentTarget
+            # TODO: Add a way to set data at nested locations.
+
+            @model.set $el.attr('name'), $el.val()
 
         getContext: ->
             context =

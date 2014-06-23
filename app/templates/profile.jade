@@ -2,41 +2,39 @@ extends app
 
 block content
 
-    .profile-header.profile-section
-        .row
-            .col-sm-4
-                img(src=profile.profileImageUrl, width='200', height='200')
-            .col-sm-8
-                h2 #{profile.name}
-                h4 #{profile.company}
+    .row
+        .col-sm-3.sidebar
+            img.img-thumbnail(src=profile.profileImageUrl, width='100%')
 
-                if profile.description
-                    p #{profile.description}
-                else
-                    p No bio given yet.
+            .doughnut
+                canvas#doughnut(width='100%')
 
-    .investments.profile-section
-        .row
-            .col-sm-4
+        .col-sm-9
+
+            h2 #{profile.name}
+            h4 #{profile.company}
+
+            section.profile-section
+                textarea.form-control.editable(name='description', placeholder='No bio given yet.')!= profile.description
+
+            section.profile-section
                 h3 Investments:
-                ul.no-list.investments-list
-                    li
-                        .bullet(style='background-color: #{chartColors[0]}')
-                        p Yahoo
-                    li
-                        .bullet(style='background-color: #{chartColors[1]}')
-                        p Google
-                    li
-                        .bullet(style='background-color: #{chartColors[2]}')
-                        p Apple
-                    li
-                        .bullet(style='background-color: #{chartColors[3]}')
-                        p Amazon
-                    li
-                        .bullet(style='background-color: #{chartColors[4]}')
-                        p Appcues
-            .col-sm-8
-                .doughnut
-                    canvas#doughnut(width='400px', height='400px')
+
+                if profile.investments
+                    ul.list-unstyled
+                        for investment in profile.investments
+                            li #{investment}
+
+                form.form-inline.add-investment
+                    .form-group
+                        input.form-control(name='company', placeholder='Google')
+                        | &nbsp;
+                    .form-group
+                        input.form-control(name='date', placeholder='2005')
+                        | &nbsp;
+                    .form-group
+                        input.form-control(name='value', placeholder='$100k')
+                        | &nbsp;
+                    button.btn.btn-default Add investment
 
     .matches
