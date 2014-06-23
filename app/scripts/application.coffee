@@ -2,12 +2,14 @@ requirejs.config
     baseUrl: '/js'
     paths:
         jquery: '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min'
+        "firebase-lib": 'https://cdn.firebase.com/js/client/1.0.15/firebase'
         underscore: 'libs/underscore'
         backbone: 'libs/backbone'
         moment: 'libs/moment.min'
         humanize: 'libs/humanize.min'
         chart: 'libs/Chart'
         bootstrap: '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min'
+        backfire: 'lib/backbone-firebase.min'
 
     shim:
         humanize:
